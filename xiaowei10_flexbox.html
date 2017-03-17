@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+
+            .box{
+                width:100%;
+                display: flex;
+                border:1px solid black;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .flexitem{
+                width:150px;
+                border:1px solid red;
+                padding:20px;
+                box-sizing:border-box;
+                margin:20px 0;
+            }
+            .item1{
+                height:120px;
+            }
+            .item2{
+                height:100px;
+            }
+            .item3{
+                height:40px;
+            }
+            .item4{
+                height:200px;
+                border:1px solid darkcyan;
+            }
+
+            @media only screen and (max-width: 640px) {
+            .box{
+                flex-wrap:wrap;
+                align-items:flex-start;
+            }
+            .item4{
+                order:-1;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="flexitem item1">
+
+    </div>
+    <div class="flexitem item2">
+
+    </div>
+    <div class="flexitem item3">
+
+    </div>
+    <div class="flexitem item4">
+
+    </div>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>
