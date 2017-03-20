@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task05</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(222, 222, 222);
+        }
+
+        .nav {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: rgb(51, 51, 51);
+        }
+
+        .nav img {
+            height: 40px;
+            margin: 0 0 10px 27px;
+            vertical-align: bottom;
+        }
+
+        .nav ul {
+            color: #fff;
+            float: right;
+            margin-right: 21px;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            font-size: 13px;
+            padding-left: 10px;
+        }
+
+        .container {
+            margin: 20px;
+            position: relative;
+        }
+
+        main {
+            min-height: 500px;
+            margin-right: 385px;
+        }
+
+        aside {
+            background-color: #fff;
+            border-top: 1px solid rgb(205, 205, 205);
+            border-left: 1px solid rgb(205, 205, 205);
+            border-right: 2px solid rgb(132, 132, 132);
+            border-bottom: 2px solid rgb(132, 132, 132);
+            min-height: 500px;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 322px;
+            padding: 20px;
+        }
+
+
+        aside h3 {
+            border-left: 3px solid rgb(204, 204, 204);
+            font-size: 16px;
+            font-weight: bold;
+            padding-left: 11px;
+            line-height: 38px;
+            height: 38px;
+        }
+
+        aside form input, select, textarea {
+            margin-top: 10px;
+        }
+
+        aside form label {
+            display: inline-block;
+            width: 96px;
+            text-align: right;
+            margin-right: 15px;
+            font-size: 12px;
+        }
+
+        #email, #password, #confirm {
+            line-height: 20px;
+            height: 20px;
+        }
+
+        aside form span {
+            font-size: 12px;
+        }
+
+        textarea {
+            vertical-align: top;
+        }
+
+        .tips {
+            margin-left: 116px;
+            font-size: 12px;
+            color: rgb(134, 149, 178);
+            height: 39px;
+            line-height: 39px;
+        }
+
+        #submit {
+            width: 322px;
+            height: 40px;
+            background: rgb(51, 85, 208);
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .section {
+            background-color: #fff;
+            border-top: 1px solid rgb(205, 205, 205);
+            border-left: 1px solid rgb(205, 205, 205);
+            border-right: 2px solid rgb(132, 132, 132);
+            border-bottom: 2px solid rgb(132, 132, 132);
+            margin-bottom: 20px;
+
+            width: calc(100% - 40px);
+            padding: 20px;
+        }
+
+        .section2 ul {
+            list-style: none;
+        }
+
+        .section p, .section2 ul li{
+            line-height: 26px;
+            font-size: 14px;
+        }
+
+        .section figure {
+            padding: 10px 0;
+        }
+
+
+
+        .section p {
+            text-indent: 2em;
+        }
+
+
+        .section h1{
+            font-size: 22px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .section h2 {
+            height: 28px;
+            line-height: 28px;
+            font-size: 18px;
+            color: rgb(116, 106, 105);
+        }
+
+        .section div span{
+            display: inline-block;
+            height: 30px;
+            line-height: 12px;
+            font-size: 12px;
+        }
+
+        .section2 ul {
+            padding-left: 20px;
+        }
+
+
+        .section3 ul li {
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid rgb(204, 204, 204);
+            padding:10px;
+            width: 100px;
+            height: 105px;
+        }
+
+        .section3 ul li p{
+            height: 12px;
+            line-height: 12px;
+            font-size: 12px;
+        }
+        .section3 ul li img{
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        .section3 ul li a{
+            text-decoration: none;
+        }
+
+
+        .section4 .ol{
+            margin-left: 42px;
+        }
+
+        .section4 table{
+            width: 100%;
+            border-collapse:collapse;
+        }
+
+        .section4 thead tr {
+            background: rgb(51, 51, 51);
+            color: #fff;
+        }
+
+        .section4 tr{
+            height: 23px;
+        }
+
+        .section4  tr td{
+            font-size: 13px;
+            line-height: 23px;
+        }
+
+        .section4 tfoot tr {
+            background: rgb(204, 204, 204);
+            text-align: center;
+        }
+
+        .section4 .zongji{
+            float: left;
+        }
+
+        .section4 table td{
+            padding-left: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <img src="img/baidu_touming.gif">
+    <ul>
+        <li>导航链接一</li>
+        <li>导航链接二</li>
+        <li>导航链接三</li>
+        <li>导航链接四</li>
+    </ul>
+</nav>
+
+<div class="container">
+    <main>
+        <section class="section section1">
+            <h1>文章一级标题</h1>
+            <h2>文章二级标题</h2>
+            <div><span>文章作者</span> <span>文章发表时间</span></div>
+
+            <p>
+                这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。
+            </p>
+            <p>
+                这是一个很长很长的段落。这是一个很长很长的段落。
+                <a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。<strong>这里有一个粗体</strong>
+            </p>
+            <figure><img src="img/typewriter.png" width="300px" height="240px"></figure>
+            <p>
+                这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。<a href="http://ife.baidu.com"
+                                                                               target="_blank">这里有一个链接到新窗口打开http://ife.baidu.com</a>这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。
+            </p>
+        </section>
+
+
+        <section class="section section2 ">
+            <h1>文章一级标题</h1>
+            <h2>文章二级标题</h2>
+            <div><span>文章作者</span> <span>文章发表时间</span></div>
+
+            <p>
+                这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。
+            </p>
+            <p>
+                这是一个很长很长的段落。这是一个很长很长的段落。
+                <a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。这是一个很长很长的段落。<strong>这里有一个粗体</strong>
+            </p>
+            <figure><img src="img/typewriter.png" width="300px" height="240px"></figure>
+
+            <div>
+                <ul>
+                    <li>列表项目一</li>
+                    <li>列表项目二</li>
+                    <li>列表项目三</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="section section3">
+            <h1>图片</h1>
+            <div class="img_container">
+                <ul>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                    <li><a href="#"><p>好看的图片</p><img src="img/typewriter.png"></a></li>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <section class="section section4">
+            <h1>最后一篇文章一级标题</h1>
+            <h2>文章二级标题</h2>
+            <div><span>文章作者</span> <span>文章发表时间</span></div>
+
+            <div class="ol">
+                <ol>
+                    <li>排名1</li>
+                    <li>排名2</li>
+                    <li>排名3</li>
+                </ol>
+            </div>
+
+            <div>下面是一个表格</div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>表头</td>
+                        <td>表头</td>
+                        <td>表头</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>表格内容单元格</td>
+                        <td>表格内容单元格</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td>表格内容单元格</td>
+                        <td>表格内容单元格</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td>表格内容单元格</td>
+                        <td>表格内容单元格</td>
+                        <td>操作</td>
+                    </tr>
+                    <tr>
+                        <td>表格内容单元格</td>
+                        <td>表格内容单元格</td>
+                        <td>操作</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <span class="zongji">总计</span>
+                            1000
+                        </td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </section>
+    </main>
+    <aside>
+        <h3>这里以后是一个侧栏，这是侧栏的标题</h3>
+        <form>
+            <label for="email">请输入邮箱地址</label>
+            <input id="email" type="text" value="这是一个文本输入框">
+            <p class="tips">邮箱地址请按要求格式输入</p>
+
+            <label for="password">请输入密码</label>
+            <input id="password" type="password">
+
+            <br/>
+
+            <label for="confirm">请重复输入密码</label>
+            <input id="confirm" type="password">
+            <p class="tips">密码请为6-16位英文数字</p>
+
+            <label>性别</label>
+            <input checked="checked" id="male" type="radio" name="gender" value="male">
+            <span>男</span>
+            <input id="female" type="radio" name="gender" value="female">
+            <span>女</span>
+            <br/>
+
+
+            <label for="city">城市</label>
+            <select id="city">
+                <option value="beijing">北京</option>
+                <option value="shanghai">上海</option>
+                <option value="shenzhen">深圳</option>
+            </select>
+            <br/>
+
+            <label>爱好</label>
+            <input type="checkbox" name="hobby" value="sports">
+            <span>运动</span>
+            <input type="checkbox" name="hobby" value="art">
+            <span>艺术</span>
+            <input type="checkbox" name="hobby" value="science">
+            <span>科学</span>
+            <br/>
+
+            <label for="bio">个人描述</label>
+            <textarea id="bio" cols="28" rows="6">这是一个多行输入框，输入您的个人描述</textarea>
+            <br/>
+
+            <input id="submit" type="submit" value="确认提交">
+
+        </form>
+    </aside>
+</div>
+
+
+</body>
+</html>
